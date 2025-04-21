@@ -2459,7 +2459,7 @@ function loadTabs() {
             newTabButton.className = 'tab new-tab';
             newTabButton.innerHTML = '+';
             newTabButton.onclick = () => {
-                const newTab = addTab('New Tab ' + (tabs.length + 1));
+                const newTab = addTab('Untitled Tab ' + (tabs.length + 1));
             };
             return newTabButton;
         }
@@ -2528,7 +2528,7 @@ function switchTab(tabId) {
             }
         }
         
-        const contentToSet = tab.content.trim() === '' ? "--[[ Made by Salad\n    discord.gg/getsalad\n ]]" : tab.content;        editor.setValue(contentToSet);
+        const contentToSet = tab.content.trim() === '' ? "" : tab.content;        editor.setValue(contentToSet);
         tab.element.classList.add('active');
         currentTab = tabId;
     }
@@ -2577,40 +2577,25 @@ function setupAutosave() {
 			});
 
 			
-			monaco.editor.defineTheme('net-theme-dark', {
-				base: 'vs-dark',
-				inherit: true,
-				colors: {
-					"editor.background": '#141414', //ur background color
-				},
-				rules: [{
-						token: 'global',
-						foreground: '6699cc', // //FFFFFF
-						fontStyle: "bold"
-					},
-					{
-						token: 'keyword',
-						foreground: 'cc99cc',
-						fontStyle: "bold"
-					},
-					{
-						token: 'comment',
-						foreground: '999999'
-					},
-					{
-						token: 'number',
-						foreground: 'f99157'
-					},
-					{
-						token: 'string',
-						foreground: '99CC99'
-					},
-					{
-						token: 'Method',
-						foreground: 'ffa1dc'
-					},
-				]
-			});
+      require(['vs/editor/editor.main'], function (monaco) {
+  monaco.editor.defineTheme('net-theme-dark', {
+    base: 'vs-dark',
+    inherit: true,
+    rules: [
+      { token: 'keyword', foreground: '#9cdcfe' },
+      { token: 'type.identifier', foreground: '#569cd6' },
+      { token: 'number', foreground: '#cbe5a1' },
+      { token: 'string', foreground: '#ce9178' },
+      { token: 'comment', foreground: '#6A9955' }
+    ],
+    colors: {
+      'editor.background': '#00000000',
+      'editor.lineHighlightBackground': '#3F191919',
+      'editor.selectionBackground': '#264f78',
+      'editorWhitespace.foreground': '#ffffff0b'
+    }
+  });
+});
 
 			editor = monaco.editor.create(document.getElementById('container'), {
 				language: 'lua',
