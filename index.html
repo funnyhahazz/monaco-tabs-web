@@ -2235,7 +2235,7 @@
           flex-direction: column;
       }
       .tabs-container {
-          background-color: #000000;
+        background-color: rgb(10,10,10);
           display: flex;
           height: 35px;
           overflow-x: auto;
@@ -2246,8 +2246,8 @@
           display: flex;
           align-items: center;
           padding: 0 15px;
-          background-color: #000000;
-          color: #000000;
+          background-color: rgb(12,12,12);
+          color: rgb(212,212,212);
           border-right: 1px solid #1e1e1e;
           min-width: 120px;
           max-width: 200px;
@@ -2257,8 +2257,8 @@
           user-select: none;
       }
       .tab.active {
-          background-color: #000000;
-          color: #000000;
+        background-color: rgb(16,16,16);
+        color: rgb(212,212,212);
       }
       .tab-icon {
           width: 20px;
@@ -2378,7 +2378,7 @@ function loadTabs() {
             addTab(tabData.title, tabData.content, tabData.id);
         });
     } else {
-        addTab('New Tab 1'); 
+        addTab('Untitled Tab'); 
     }
 }
 
@@ -2465,7 +2465,7 @@ function loadTabs() {
         }
 
         function addTab(title, content = '', id = null) {
-    const defaultText = "--[[\n    Made by Salad\n    discord.gg/getsalad\n ]]";    
+    const defaultText = "";    
     if (!content) {
         content = defaultText;
     }
