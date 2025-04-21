@@ -2598,44 +2598,29 @@ function setupAutosave() {
 			});
 
 			
-			monaco.editor.defineTheme('net-theme-dark', {
-				base: 'vs-dark',
-				inherit: true,
-				colors: {
-					"editor.background": '#0a0a0a', //ur background color
-				},
-				rules: [{
-						token: 'global',
-						foreground: '6699cc', // //FFFFFF
-						fontStyle: "bold"
-					},
-					{
-						token: 'keyword',
-						foreground: 'cc99cc',
-						fontStyle: "bold"
-					},
-					{
-						token: 'comment',
-						foreground: '999999'
-					},
-					{
-						token: 'number',
-						foreground: 'f99157'
-					},
-					{
-						token: 'string',
-						foreground: '99CC99'
-					},
-					{
-						token: 'Method',
-						foreground: 'ffa1dc'
-					},
-				]
-			});
+    require(['vs/editor/editor.main'], function (monaco) {
+      monaco.editor.defineTheme('Rain', {
+        base: 'vs-dark',
+        inherit: true,
+        rules: [
+          { token: 'global', foreground: '#6699cc' },
+          { token: 'keyword', foreground: '#cc99cc' },
+          { token: 'type.identifier', foreground: '#ffa1dc' },
+          { token: 'number', foreground: '#f99157' },
+          { token: 'string', foreground: '#99CC99' },
+          { token: 'comment', foreground: '#6A9955' }
+        ],
+        colors: {
+          'editor.background': '#00000000',
+          'editor.lineHighlightBackground': '#0b0b0b',
+          'editor.selectionBackground': '#264f78',
+          'editorWhitespace.foreground': '#ffffff0b'
+        }
+      });
 
 			editor = monaco.editor.create(document.getElementById('container'), {
 				language: 'lua',
-				theme: "net-theme-dark",
+				theme: "Rain",
 				acceptSuggestionOnEnter: "smart",
 				cursorSmoothCaretAnimation: true,
 				suggestOnTriggerCharacters: true,
