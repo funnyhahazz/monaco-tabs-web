@@ -2480,7 +2480,7 @@ function loadTabs() {
             newTabButton.className = 'tab new-tab';
             newTabButton.innerHTML = '+';
             newTabButton.onclick = () => {
-                const newTab = addTab('Untitled Tab ' + (tabs.length + 1));
+                const newTab = addTab('Untitled Tab ');
             };
             return newTabButton;
         }
