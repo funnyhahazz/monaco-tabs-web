@@ -2337,6 +2337,27 @@
       .tab.removing {
           animation: tabRemove 0.2s ease-out;
       }
+
+    /* Smooth, thin scrollbars */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      transition: background-color 0.2s ease-in-out;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
   </style>
 <script src="https://unpkg.com/monaco-editor@0.45.0/min/vs/loader.js"></script>
   <script type="text/javascript">
