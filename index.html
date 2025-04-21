@@ -2338,7 +2338,7 @@
           animation: tabRemove 0.2s ease-out;
       }
   </style>
-  <script src="vs/loader.js"></script>
+<script src="https://unpkg.com/monaco-editor@0.45.0/min/vs/loader.js"></script>
   <script type="text/javascript">
       require.config({
           paths: {
@@ -2796,7 +2796,7 @@ function setupAutosave() {
 				});
 			}
 			async function load() {
-				var docs = await(await fetch('https://raw.githubusercontent.com/iceycold3/monaco/refs/heads/main/lib.json')).json();
+				var docs = await(await fetch('https://raw.githubusercontent.com/funnyhahazz/monaco-tabs-web/refs/heads/main/lib.json')).json();
 
 				for (var prop in docs) {
   					  for(var item in docs[prop])
@@ -2828,7 +2828,7 @@ function setupAutosave() {
 			load();
 			Refresh = function () {
 				var text = GetText();
-				SetText("");
+				SetText("-- Test");
 				editor.trigger('keyboard', 'type', {
 					text: text
 				});
