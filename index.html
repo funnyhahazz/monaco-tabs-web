@@ -2398,7 +2398,7 @@ function loadTabs() {
             addTab(tabData.title, tabData.content, tabData.id);
         });
     } else {
-        addTab('Untitled Tab'); 
+        addTab('Script'); 
     }
 }
 
@@ -2479,7 +2479,7 @@ function loadTabs() {
             newTabButton.className = 'tab new-tab';
             newTabButton.innerHTML = '+';
             newTabButton.onclick = () => {
-                const newTab = addTab('Untitled Tab ');
+                const newTab = addTab('Script');
             };
             return newTabButton;
         }
@@ -2601,7 +2601,7 @@ monaco.editor.defineTheme('net-theme-dark', {
   base: 'vs-dark',
   inherit: true,
   colors: {
-    "editor.background": '#0a0a0a',
+    "editor.background": '#080808',
     "editor.lineHighlightBackground": '#0c0c0c',
     "editor.selectionBackground": '#264f78',
     "editorWhitespace.foreground": '#ffffff0b'
