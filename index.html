@@ -2216,7 +2216,7 @@
 			margin: 0;
 			padding: 0;
 			overflow: hidden;
-                        background: #0a0a0a;
+                        background: #0a0a0c;
 		}
 	</style>
 	<meta charset="utf-8" />
@@ -2236,7 +2236,7 @@
           flex-direction: column;
       }
       .tabs-container {
-        background-color: rgb(8,8,8);
+        background-color: rgb(8,8,10);
           display: flex;
           height: 35px;
           overflow-x: auto;
@@ -2246,7 +2246,7 @@
           display: flex;
           align-items: center;
           padding: 0 15px;
-          background-color: rgb(12,12,12);
+          background-color: rgb(12,12,14);
           color: rgb(212,212,212);
           border-radius: 3px;
           min-width: 120px;
@@ -2257,8 +2257,8 @@
           user-select: none;
       }
       .tab.active {
-        background-color: rgb(16,16,16);
-        color: rgb(212,212,212);
+        background-color: rgb(16,16,18);
+        color: rgb(212,212,214);
       }
       .tab-icon {
           width: 20px;
@@ -2283,7 +2283,7 @@
           font-family: 'Segoe UI', sans-serif;
       }
       .tab-title.editing {
-          background: #000000;
+          background: #000002;
           padding: 2px 4px;
           border-radius: 3px;
           outline: none;
@@ -2301,7 +2301,7 @@
       }
       .tab-close:hover {
           opacity: 1;
-          background-color: rgba(255,255,255,0.1);
+          background-color: rgba(253,253,255,0.1);
       }
       .tab.new-tab {
           min-width: 10px;
@@ -2312,7 +2312,7 @@
           margin-left: -2px;
       }
       .tab.new-tab:hover {
-          background-color: rgba(255,255,255,0.1);
+          background-color: rgba(253,253,255,0.1);
       }
       @keyframes tabAppear {
           from {
@@ -2348,13 +2348,13 @@
     }
 
     ::-webkit-scrollbar-thumb {
-      background-color: rgba(255, 255, 255, 0.1);
+      background-color: rgba(253, 253, 255, 0.1);
       border-radius: 10px;
       transition: background-color 0.2s ease-in-out;
     }
 
     ::-webkit-scrollbar-thumb:hover {
-      background-color: rgba(255, 255, 255, 0.2);
+      background-color: rgba(253, 253, 255, 0.2);
     }
 
   </style>
@@ -2601,37 +2601,37 @@ monaco.editor.defineTheme('net-theme-dark', {
   base: 'vs-dark',
   inherit: true,
   colors: {
-    "editor.background": '#080808',
-    "editor.lineHighlightBackground": '#0c0c0c',
-    "editor.selectionBackground": '#264f78',
+    "editor.background": '#08080a',
+    "editor.lineHighlightBackground": '#0c0c0e',
+    "editor.selectionBackground": '#264f7a',
     "editorWhitespace.foreground": '#ffffff0b'
   },
   rules: [
     {
       token: 'global',
-      foreground: '6699cc',
+      foreground: '6699ee',
       fontStyle: 'bold'
     },
     {
       token: 'keyword',
-      foreground: 'cc99cc',
+      foreground: 'cc99ee',
       fontStyle: 'bold'
     },
     {
       token: 'type.identifier',
-      foreground: 'ffa1dc'
+      foreground: 'ffa1de'
     },
     {
       token: 'number',
-      foreground: 'f99157'
+      foreground: 'f99159'
     },
     {
       token: 'string',
-      foreground: '99cc99'
+      foreground: '99cc9b'
     },
     {
       token: 'comment',
-      foreground: '6A9955'
+      foreground: '919194'
     }
   ]
 });
