@@ -2247,7 +2247,7 @@
           align-items: center;
           padding: 0 15px;
           background-color: rgb(12,12,18);
-          color: rgb(212,212,216);
+          color: rgb(110,110,123);
           border-radius: 3px;
           min-width: 120px;
           max-width: 200px;
@@ -2258,21 +2258,7 @@
       }
       .tab.active {
         background-color: rgb(16,16,20);
-        color: rgb(212,212,214);
-      }
-      .tab-icon {
-          width: 20px;
-          height: 20px;
-          margin-right: 8px;
-          display: flex;
-          align-items: center;
-          justify-content: center; 
-          position: relative; 
-          top: 2px;
-      }
-      .tab-icon svg {
-          width: 16px;
-          height: 16px;
+          color: rgb(120,120,134);
       }
       .tab-title {
           flex-grow: 1;
@@ -2371,8 +2357,6 @@
       let currentTab = null;
       let tabs = [];
 
-      const luaIcon = `<img src="luaicon.png" alt="Lua Icon" style="width: 20px; height: 20px;" />`;
-
         class Tab {
             constructor(title, content = '') {
                 this.id = 'tab-' + Math.random().toString(36).substr(2, 9);
@@ -2441,10 +2425,6 @@ function loadTabs() {
             const tabElement = document.createElement('div');
             tabElement.className = 'tab new';
             tabElement.setAttribute('data-tab-id', tab.id);
-            
-            const iconElement = document.createElement('div');
-            iconElement.className = 'tab-icon';
-            iconElement.innerHTML = luaIcon;
             
             const titleElement = document.createElement('div');
             titleElement.className = 'tab-title';
@@ -2602,6 +2582,7 @@ monaco.editor.defineTheme('net-theme-dark', {
   inherit: true,
   colors: {
     "editor.background": '#08080a',
+    "editor.foreground": '#f8f8f2',
     "editor.lineHighlightBackground": '#0c0c10',
     "editor.selectionBackground": '#264f7a',
     "editorWhitespace.foreground": '#ffffff0b'
@@ -2609,13 +2590,11 @@ monaco.editor.defineTheme('net-theme-dark', {
   rules: [
     {
       token: 'global',
-      foreground: '6699ee',
-      fontStyle: 'bold'
+      foreground: 'f8f8f2'
     },
     {
       token: 'keyword',
-      foreground: 'cc99ee',
-      fontStyle: 'bold'
+      foreground: 'ff79c6'
     },
     {
       token: 'type.identifier',
@@ -2623,15 +2602,15 @@ monaco.editor.defineTheme('net-theme-dark', {
     },
     {
       token: 'number',
-      foreground: 'f99159'
+      foreground: 'bd93f9'
     },
     {
       token: 'string',
-      foreground: '99cc9b'
+      foreground: 'f1fa8c'
     },
     {
       token: 'comment',
-      foreground: '919194'
+      foreground: '6272a4'
     }
   ]
 });
