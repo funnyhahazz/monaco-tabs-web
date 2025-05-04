@@ -2382,7 +2382,7 @@ function loadTabs() {
             addTab(tabData.title, tabData.content, tabData.id);
         });
     } else {
-        addTab('Script'); 
+        addTab('Untitled Tab'); 
     }
 }
 
@@ -2458,7 +2458,7 @@ function loadTabs() {
             newTabButton.className = 'tab new-tab';
             newTabButton.innerHTML = '+';
             newTabButton.onclick = () => {
-                const newTab = addTab('Script');
+                const newTab = addTab('Untitled Tab');
             };
             return newTabButton;
         }
