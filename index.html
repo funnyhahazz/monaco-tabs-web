@@ -2216,7 +2216,7 @@
 			margin: 0;
 			padding: 0;
 			overflow: hidden;
-                        background: #08080a;
+                        background: #080808;
 		}
 	</style>
 	<meta charset="utf-8" />
@@ -2239,7 +2239,7 @@
           flex-direction: column;
       }
       .tabs-container {
-        background-color: rgb(8,8,10);
+        background-color: rgb(8,8,8);
           display: flex;
           height: 35px;
           overflow-x: auto;
@@ -2249,7 +2249,7 @@
           display: flex;
           align-items: center;
           padding: 0 15px;
-          background-color: rgb(12,12,18);
+          background-color: rgb(12,12,12);
           color: rgb(110,110,123);
           border-radius: 3px;
           min-width: 120px;
@@ -2260,8 +2260,8 @@
           user-select: none;
       }
       .tab.active {
-        background-color: rgb(16,16,20);
-          color: rgb(120,120,134);
+        background-color: rgb(16,16,16);
+          color: rgb(120,120,120);
       }
       .tab-title {
           flex-grow: 1;
@@ -2272,7 +2272,7 @@
           font-family: 'Segoe UI', sans-serif;
       }
       .tab-title.editing {
-          background: #000004;
+          background: #181818;
           padding: 2px 4px;
           border-radius: 3px;
           outline: none;
@@ -2337,13 +2337,13 @@
     }
 
     ::-webkit-scrollbar-thumb {
-      background-color: rgba(253, 253, 255, 0.1);
+      background-color: rgba(190,190,190, 0.1);
       border-radius: 10px;
       transition: background-color 0.2s ease-in-out;
     }
 
     ::-webkit-scrollbar-thumb:hover {
-      background-color: rgba(253, 253, 255, 0.2);
+      background-color: rgba(190,190,190, 0.2);
     }
 
   </style>
@@ -2583,36 +2583,36 @@ monaco.editor.defineTheme('net-theme-dark', {
   base: 'vs-dark',
   inherit: true,
   colors: {
-    "editor.background": '#08080a',
-    "editor.foreground": '#f8f8f2',
-    "editor.lineHighlightBackground": '#0c0c10',
+    "editor.background": '#080808',
+    "editor.foreground": '#a5a5a5',
+    "editor.lineHighlightBackground": '#1a1a1a',
     "editor.selectionBackground": '#264f7a',
     "editorWhitespace.foreground": '#ffffff0b'
   },
   rules: [
     {
       token: 'global',
-      foreground: 'f8f8f2'
+      foreground: '6699cc'
     },
     {
       token: 'keyword',
-      foreground: 'ff79c6'
+      foreground: 'cc99cc'
     },
     {
       token: 'type.identifier',
-      foreground: 'ffa1de'
+      foreground: 'ffa1dc'
     },
     {
       token: 'number',
-      foreground: 'bd93f9'
+      foreground: 'f99157'
     },
     {
       token: 'string',
-      foreground: 'f1fa8c'
+      foreground: '99CC99'
     },
     {
       token: 'comment',
-      foreground: '6272a4'
+      foreground: '6A9955'
     }
   ]
 });
