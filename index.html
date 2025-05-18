@@ -2594,45 +2594,45 @@ monaco.editor.defineTheme('RaindropTheme', {
   base: 'vs-dark',
   inherit: true,
   colors: {
-    "editor.background": '#101010',
-    "editor.foreground": '#a5a5a5',
-    "editor.lineHighlightBackground": '#181818',
-    "editor.selectionBackground": '#264f7a',
-    "editorWhitespace.foreground": '#ffffff0b'
+    "editor.background": '#1e1e1e', // Slightly darker than original vs-dark background
+    "editor.foreground": '#d4d4d4', // Lighter gray text, closer to the original
+    "editor.lineHighlightBackground": '#2a2a2a', // Slightly darker line highlight for subtle contrast
+    "editor.selectionBackground": '#4e9fd1', // Subtle blue selection highlight (closer to original)
+    "editorWhitespace.foreground": '#ffffff0d' // Slightly more transparent whitespace markers
+  },
+  rules: [] // Add any additional syntax rules if needed
+});
+
+editor = monaco.editor.create(document.getElementById('container'), {
+  language: 'lua',
+  theme: "RaindropTheme",
+  acceptSuggestionOnEnter: "smart",
+  cursorSmoothCaretAnimation: true,
+  suggestOnTriggerCharacters: true,
+  fontFamily: 'JetBrains Mono',
+  suggestSelection: "recentlyUsed",
+  folding: true,
+  dragAndDrop: true,
+  links: false,
+  minimap: {
+    enabled: false,
+  },
+  showFoldingControls: "always",
+  smoothScrolling: true,
+  stopRenderingLineAfter: 6500,
+  cursorBlinking: "smooth",
+  foldingHighlight: false,
+  fontLigatures: true,
+  formatOnPaste: true,
+  showDeprecated: true,
+  suggest: {
+    snippetsPreventQuickSuggestions: false,
+  },
+  padding: {
+    top: 24,
   }
 });
 
-			
-			editor = monaco.editor.create(document.getElementById('container'), {
-				language: 'lua',
-				theme: "RaindropTheme",
-				acceptSuggestionOnEnter: "smart",
-				cursorSmoothCaretAnimation: true,
-				suggestOnTriggerCharacters: true,
-			        fontFamily: 'JetBrains Mono',
-				suggestSelection: "recentlyUsed",
-				folding: true,
-					dragAndDrop: true,
-					links: false,
-					minimap: {
-						enabled: false,
-					},
-					showFoldingControls: "always",
-					smoothScrolling: true,
-					stopRenderingLineAfter: 6500,
-					cursorBlinking: "smooth",
-					cursorSmoothCaretAnimation: true,
-					foldingHighlight: false,
-					fontLigatures: true,
-					formatOnPaste: true,
-					showDeprecated: true,
-					suggest: {
-						snippetsPreventQuickSuggestions: false,
-					},
-					padding: {
-						top: 24,
-					}
-			});
 
       loadTabs();
       setupAutosave();
