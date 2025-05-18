@@ -2364,8 +2364,6 @@
       let Proposals = [];
       let currentTab = null;
       let tabs = [];
-
-      const luaIcon = `<img src="luaicon.png" alt="Lua Icon" style="width: 14px; height: 14px;" />`;
 	  
         class Tab {
             constructor(title, content = '') {
@@ -2436,10 +2434,6 @@ function loadTabs() {
             tabElement.className = 'tab new';
             tabElement.setAttribute('data-tab-id', tab.id);
             
-            const iconElement = document.createElement('div');
-            iconElement.className = 'tab-icon';
-            iconElement.innerHTML = luaIcon;
-            
             const titleElement = document.createElement('div');
             titleElement.className = 'tab-title';
             titleElement.textContent = tab.title;
@@ -2459,7 +2453,6 @@ function loadTabs() {
                 }
             };
             
-            tabElement.appendChild(iconElement);
             tabElement.appendChild(titleElement);
             tabElement.appendChild(closeButton);
             
