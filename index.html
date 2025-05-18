@@ -2590,9 +2590,22 @@ function setupAutosave() {
 				triggerCharacters: ['.', ':', '"'],
 			});
 
+monaco.editor.defineTheme('RaindropTheme', {
+  base: 'vs-dark',
+  inherit: true,
+  colors: {
+    "editor.background": '#101010',
+    "editor.foreground": '#a5a5a5',
+    "editor.lineHighlightBackground": '#181818',
+    "editor.selectionBackground": '#264f7a',
+    "editorWhitespace.foreground": '#ffffff0b'
+  }
+});
+
+			
 			editor = monaco.editor.create(document.getElementById('container'), {
 				language: 'lua',
-				theme: "vs-dark",
+				theme: "RaindropTheme",
 				acceptSuggestionOnEnter: "smart",
 				cursorSmoothCaretAnimation: true,
 				suggestOnTriggerCharacters: true,
