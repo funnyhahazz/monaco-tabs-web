@@ -2788,7 +2788,7 @@ editor = monaco.editor.create(document.getElementById('container'), {
 				});
 			}
 			async function load() {
-				var docs = await(await fetch('https://raw.githubusercontent.com/funnyhahazz/monaco-tabs-web/refs/heads/main/lib.json')).json();
+				var docs = await(await fetch('https://raw.githubusercontent.com/systempuncher/monaco-tabs-web/refs/heads/main/lib.json')).json();
 
 				for (var prop in docs) {
   					  for(var item in docs[prop])
