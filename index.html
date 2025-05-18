@@ -2594,13 +2594,13 @@ monaco.editor.defineTheme('RaindropTheme', {
   base: 'vs-dark',
   inherit: true,
   colors: {
-    "editor.background": '#101010', // Slightly darker than original vs-dark background
-    "editor.foreground": '#d4d4d4', // Lighter gray text, closer to the original
-    "editor.lineHighlightBackground": '1a1a1a', // Slightly darker line highlight for subtle contrast
-    "editor.selectionBackground": '#4e9fd1', // Subtle blue selection highlight (closer to original)
-    "editorWhitespace.foreground": '#ffffff0d' // Slightly more transparent whitespace markers
+    "editor.background": '#101010',
+    "editor.foreground": '#d4d4d4', 
+    "editor.lineHighlightBackground": '#1a1a1a',
+    "editor.selectionBackground": '#1a1a1a',
+    "editorWhitespace.foreground": '#ffffff0d'
   },
-  rules: [] // Add any additional syntax rules if needed
+  rules: []
 });
 
 editor = monaco.editor.create(document.getElementById('container'), {
