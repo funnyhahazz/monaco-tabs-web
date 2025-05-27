@@ -2216,7 +2216,7 @@
 			margin: 0;
 			padding: 0;
 			overflow: hidden;
-                        background: #080808;
+                        background: #171717;
 		}
 	</style>
 	<meta charset="utf-8" />
@@ -2237,11 +2237,12 @@
           height: 100%;
           display: flex;
           flex-direction: column;
-          border-bottom: 1px solid #2a2a2a;
+          border-bottom: 1px solid #2c2c2c;
+          border-right: 1px solid #2c2c2c;
       }
 .tabs-container {
   background-color: rgb(14,14,14);
-  border-bottom: 1px solid #2a2a2a; /* Bottom border */
+  border-bottom: 1px solid #2c2c2c; /* Bottom border */
   display: flex;
   height: 35px;
   overflow-x: auto;
@@ -2252,20 +2253,20 @@
           display: flex;
           align-items: center;
           padding: 0 15px;
-          background-color: rgb(18,18,18);
-	  border-right: 2px solid rgb(22,22,22);
+          background-color: rgb(40,40,40);
+	  border-right: 2px solid rgb(44,44,44);
           color: rgb(135,135,135);
-          border-radius: 3px;
-          min-width: 120px;
-          max-width: 200px;
+          border-radius: 4px;
+          min-width: 65px;
+          max-width: 65px;
           position: relative;
           cursor: pointer;
           transition: background-color 0.2s, color 0.2s;
           user-select: none;
       }
       .tab.active {
-        background-color: rgb(22,22,22);
-        border-right: 2px solid rgb(26,26,26);
+        background-color: rgb(40,40,40);
+	border-right: 2px solid rgb(44,44,44);
         color: rgb(215,215,215);
       }
       .tab-title {
@@ -2292,10 +2293,11 @@
           width: 16px;
           height: 16px;
           border-radius: 3px;
+          color: rgb(101,101,101);
       }
       .tab-close:hover {
           opacity: 1;
-          background-color: rgba(251,251,255,0.1);
+          background-color: rgba(185,185,185,0.1);
       }
       .tab.new-tab {
           min-width: 10px;
@@ -2304,6 +2306,7 @@
           background-color: transparent;
           border: none;
           margin-left: -2px;
+          color: rgb(101,101,101);
       }
       .tab.new-tab:hover {
           background-color: rgba(0,0,0,0);
@@ -2342,7 +2345,7 @@
     }
 
     ::-webkit-scrollbar-thumb {
-      background-color: rgba(190,190,190, 0.1);
+      background-color: rgba(120,120,120, 0.1);
       border-radius: 10px;
       transition: background-color 0.2s ease-in-out;
     }
@@ -2390,7 +2393,7 @@ function loadTabs() {
             addTab(tabData.title, tabData.content, tabData.id);
         });
     } else {
-        addTab(' Script 1'); 
+        addTab('Untitled Tab'); 
     }
 }
 
@@ -2466,7 +2469,7 @@ function loadTabs() {
             newTabButton.className = 'tab new-tab';
             newTabButton.innerHTML = '+';
             newTabButton.onclick = () => {
-                const newTab = addTab(' Script ' + (tabs.length + 1));
+                const newTab = addTab('Untitled Tab');
             };
             return newTabButton;
         }
@@ -2583,22 +2586,22 @@ function setupAutosave() {
 				triggerCharacters: ['.', ':', '"'],
 			});
 
-monaco.editor.defineTheme('RaindropTheme', {
-  base: 'vs-dark',
-  inherit: true,
-  colors: {
-    "editor.background": '#101010',
-    "editor.foreground": '#d4d4d4', 
-    "editor.lineHighlightBackground": '#1a1a1a',
-    "editor.selectionBackground": '#1a1a1a',
-    "editorWhitespace.foreground": '#ffffff0d'
-  },
-  rules: []
-});
+//monaco.editor.defineTheme('RaindropTheme', {
+  //base: 'vs-dark',
+  //inherit: true,
+  //colors: {
+    //"editor.background": '#101010',
+    //"editor.foreground": '#d4d4d4', 
+    //"editor.lineHighlightBackground": '#1a1a1a',
+    //"editor.selectionBackground": '#1a1a1a',
+    //"editorWhitespace.foreground": '#ffffff0d'
+  //},
+  //rules: []
+//});
 
 editor = monaco.editor.create(document.getElementById('container'), {
   language: 'lua',
-  theme: "RaindropTheme",
+  theme: "vs-dark",
   acceptSuggestionOnEnter: "smart",
   cursorSmoothCaretAnimation: true,
   suggestOnTriggerCharacters: true,
